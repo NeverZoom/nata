@@ -1,0 +1,195 @@
+h1, h2, h3, h4, h5, h6, p
+  margin-bottom: 0
+
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+
+h1
+  font-weight: 800
+  font-size: 128px
+  line-height: 112px
+
+h2
+  font-style: italic
+  font-weight: 200
+  font-size: 128px
+  line-height: 112px
+
+h3
+  font-weight: 800
+  font-size: 80px
+  line-height: 72px
+
+h4
+  font-style: italic
+  font-weight: 200
+  font-size: 40px
+  line-height: 40px
+
+h5
+  font-weight: 800
+  font-size: 32px
+  line-height: 24px
+
+h6
+  font-weight: 500
+  font-size: 48px
+  line-height: 40px
+
+p
+  font-weight: 400
+  font-size: 20px
+  line-height: 24px
+  font-family: OpenSans
+
+a
+  text-decoration: none
+  display: inline-block
+  position: relative
+  font-weight: 400
+  font-size: 20px
+  line-height: 24px
+  color: $textcolor
+  font-family: OpenSans
+  transition: all 0.3s ease
+  &::after
+    content: ''
+    position: absolute
+    bottom: -1px
+    left: 0
+    width: 0
+    height: 1px
+    background: $textcolor
+    transition: all 0.3s ease
+  &:hover
+    color: $textcolor
+    transition: all 0.3s ease
+    &::after
+      width: 100%
+
+a.button
+  font-weight: 400
+  font-size: 40px
+  line-height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-transform: lowercase
+  font-family: Moniqa
+  gap: 16px
+  border: 1px solid $textcolor
+  padding: 20px 0
+  border-radius: 100%
+  background: none
+  width: 336px
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 100%
+    border: 0px solid $textcolor
+    transform: rotate(0)
+    transition: all 0.3s ease
+  &::after
+    content: none
+  &:hover
+    background: $accent
+    &::before
+      transform: rotate(6deg)
+      border: 1px solid $textcolor
+  img
+    width: 40px
+    
+section
+  margin-bottom: 196px
+
+.cursor
+  position: absolute
+  top: -100%
+  left: 0
+  opacity: 0
+  transition: opacity 0.3s ease
+  transform: translate(-50%, -50%)
+  z-index: -1
+
+.cursor.active-cursor
+  opacity: 1
+  z-index: 0
+
+.cursor-body
+  cursor: none
+
+.slick-prev, .slick-next
+  height: 40px
+  width: 72px
+  .path
+    fill: none
+    transition: all 0.3s ease
+  &:hover
+    .path
+      fill: $accent
+
+.slick-prev
+  left: -88px  
+.slick-next
+  right: 0
+
+.popup-modal
+  display: none
+
+.mfp-content
+  background: white
+  width: 100%
+  height: 100%
+  max-width: 688px
+  max-height: 488px
+  .popup-modal
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 64px
+    flex-direction: column
+    height: 100%
+    width: 100%
+    .content
+      font-weight: 500
+      font-size: 48px
+      line-height: 40px
+    .social
+      display: flex
+      gap: 64px
+      justify-content: center
+      align-items: center
+      a
+        &::after
+          content: none
+      svg
+        &:hover
+          path
+            fill: $accent
+        path
+          transition: all 0.3s ease
+          fill: none
+
+.mfp-bg
+  background: #505050
+  opacity: 0.5
+
+.mfp-close
+  top: 30px
+  right: 30px
+  width: auto
+  height: auto
+  font-size: 0
+  line-height: 0
+  &:hover
+    cursor: pointer
+  &:focus, &:active
+    top: 30px
+    right: 30px
+
+.relative
+  position: relative

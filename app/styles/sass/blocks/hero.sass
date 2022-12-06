@@ -1,0 +1,26 @@
+.hero__wrapper
+  .hero_image
+    border-radius: 0px 0px 500px 500px
+    width: 80%
+    margin: 0 auto
+    display: block
+    margin-bottom: 64px
+    transition: all 0.3s ease
+    max-height: 320px
+    object-fit: cover
+  .hero_image.active
+    width: 100%
+    border-radius: 0px 0px 1900px 1900px
+  h1
+    svg
+      margin-bottom: 20px
+      path
+        transition: all 0.3s ease
+      path.active
+        fill: $accent
+  h2
+    margin-bottom: 56px
+  img.animate
+    transition: all 0.3s ease
+    &:hover
+      transform: translateY(-24px)

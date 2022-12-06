@@ -1,0 +1,54 @@
+.nyText__wrapper, .mkText__wrapper, .teText__wrapper, .mpText__wrapper
+  h3
+    text-transform: uppercase
+    span
+      font-style: italic
+      font-weight: 200
+      font-size: 80px
+      line-height: 72px
+      padding: 0 16px
+  img
+    width: 160px
+    height: 160px
+  .first_image
+    border-radius: 0px 80px
+    transform: translateY(-20px)
+  .second_image
+    border-radius: 80px 0px
+    transform: translateY(20px)
+    margin-right: calc(50px - 16px)
+
+.mkText__wrapper
+  .svg_g
+    display: flex
+    justify-content: space-between
+    align-items: center
+  h4
+    margin-bottom: 20px
+  h3
+    span    
+      display: inline-block
+      width: 100%
+      text-align: right
+      &:first-child
+        padding-right: 50px
+
+.teText__wrapper
+  h3
+    margin-top: 100px
+  img
+    width: 336px
+    height: 336px
+    &:first-child
+      margin-right: 4px
+      border-radius: 0px 160px 
+    &:last-child
+      margin-left: 4px
+      border-radius: 160px 0px
+      
+.mpText__wrapper
+  padding: 80px 0
+  h3
+    span
+      display: inline-block
+      padding: 40px 0

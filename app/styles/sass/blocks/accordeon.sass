@@ -1,0 +1,79 @@
+.accordion__wrapper, .cource__wrapper, footer
+  .accordion
+    counter-reset: section
+    margin: 88px 0
+    width: 100%
+    .accordion-item
+      position: relative
+      border-top: 1px solid $textcolor
+      &:last-child
+        border-bottom: 1px solid $textcolor
+      &:hover
+        .title
+          color: $textcolor !important
+          &::before
+            color: $grey !important
+        .icon
+          svg
+            path
+              stroke: $textcolor !important
+      .heading
+        display: flex
+        justify-content: space-between
+        padding: 55px 0
+        .icon
+          transition: all 0.3s ease
+          svg
+            path
+              transition: all 0.3s ease
+        .title
+          transition: all 0.3s ease
+          font-weight: 500
+          font-size: 48px
+          line-height: 40px
+          color: $grey
+          display: flex
+          &::before
+            display: block
+            content: "(0" counter(section) ")"
+            counter-increment: section
+            font-style: italic
+            font-weight: 200
+            font-size: 40px
+            line-height: 40px
+            margin-right: 44px
+      .content
+        display: none
+        margin-bottom: 64px
+        padding-left: 88px
+        p
+      .content-slider
+        // display: none
+        margin-top: 64px
+      &.active
+        .heading
+          padding-bottom: 24px
+          .title
+            color: $textcolor
+          .icon
+            transform: rotate(90deg)
+            svg
+              path
+                stroke: $textcolor !important
+  .social
+    display: flex
+    gap: 32px
+    a
+      &::after
+        content: none
+      &:hover
+        svg
+          path
+            fill: $accent
+      svg
+        path
+          transition: all 0.3s ease
+
+footer
+  .social
+    gap: 24px

@@ -1,0 +1,24 @@
+.top-line__wrapper
+  font-family: MoniqaP
+  font-weight: 500
+  font-size: 24px
+  line-height: 24px
+  border-bottom: 1px solid $textcolor
+  padding: 16px 0 24px 0
+  .social_links
+    display: flex
+    justify-content: space-between
+    gap: 24px
+    margin-right: 8px
+    a
+      &::after
+        content: none
+    .hover
+      transition: all 0.3s ease
+    svg
+      &:hover
+        .hover
+          fill: $accent
+
+.lines
+  margin-top: 16px
